@@ -9,9 +9,10 @@ namespace test
             for (int i = 1; i <= 100/6; i++)
             {
                 int counter = 0;
-
+                // New Line
                 int i1 = 6 * i - 1;
-
+                // Even newer line
+                // More lines
                 for (int j = 2; j <= i1 / 2; j++)
                 {
                     if  (i1 % j == 0)
