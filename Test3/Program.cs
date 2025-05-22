@@ -13,6 +13,7 @@ for (int i = 0; i < 3; i++)
         try
         {
             Console.WriteLine(jaggedArr[i][j] + " i={0}, j={1}; ", i, j);
+//qwwwww
         }
         catch
         {
