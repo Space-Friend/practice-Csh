@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prog1-Primes", "Prog1-Prime
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog2", "..\Prog2\Prog2.csproj", "{87A05716-928E-4B4F-882C-584DFFE6C687}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test3", "..\Test3\Test3.csproj", "{E17FA92B-E5A7-44A0-8408-20ACFCBDACD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "..\Test3\Arrays.csproj", "{E17FA92B-E5A7-44A0-8408-20ACFCBDACD3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

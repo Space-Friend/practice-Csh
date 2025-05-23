@@ -1,9 +1,8 @@
-﻿int[][] jaggedArr = new int[][]
-{
-  new int[ ] {1,8,2,7,9},
-  new int[ ] {2,4,6},
-  new int[ ] {33,42}
-};
+﻿int[][] jaggedArr =
+[
+  [1,2,3,4],
+  [2,2,3,33]
+];
 
 string[][] fruits = { new string[] { "Apple", "Apricot" }, new string[] { "Mango", "Orange", "Melon" } };
 for (int i = 0; i < 3; i++)
