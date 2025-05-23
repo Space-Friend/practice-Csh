@@ -9,7 +9,7 @@ class Program
         Post post = new Post();
         post.Text = postText;
         post.ShowPost();
-
+        //lol
     }
 }
 
