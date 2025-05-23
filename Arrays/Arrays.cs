@@ -4,8 +4,8 @@
     {
         int[][] jaggedArr =
         [
-          [1,2,3,4],
-          [2,2,3,33]
+            [1,2,3,4],
+            [2,2,3,33]
         ];
 
         string[][] fruits = { new string[] { "Apple", "Apricot" }, new string[] { "Mango", "Orange", "Melon" } };
@@ -22,6 +22,7 @@
                     Console.WriteLine("  Failed! i={0}, j={1}; ", i, j);
                 }
             }
+            Console.WriteLine("a");
         }
     }
 }
