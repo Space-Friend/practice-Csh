@@ -20,7 +20,6 @@ namespace Code_Coach_Challenge
             Console.WriteLine(total.points);
         }
     }
-
     class DancerPoints
     {
         public string name;
@@ -31,7 +30,10 @@ namespace Code_Coach_Challenge
             this.points = points;
         }
 
-        public static
-
+        public static DancerPoints operator+ (DancerPoints a, DancerPoints b)
+        {
+            DancerPoints res = new DancerPoints(a.name + " & " + b.name, a.points+b.points);
+            return res;
+        }
     }
 }
