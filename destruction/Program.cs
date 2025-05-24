@@ -15,20 +15,17 @@ namespace destruction
                 Y = 20;
             }
         }
-        class Ahhh
+        class Ahhh(string s)
         {
             private string[] zzz = new string[4];
-            public string Name { get; set; }
-            public Ahhh (string s)
-            {
-                Name = s;
-            }
-            
+            public string Name { get; set; } = s;
+
             public string this[int index]
             {
                 get
                 {
                     return zzz[index];
+                    //svo
                 }
                 set
                 {
