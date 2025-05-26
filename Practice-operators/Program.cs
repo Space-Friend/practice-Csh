@@ -20,6 +20,20 @@ namespace Code_Coach_Challenge
             Console.WriteLine(total.points);
             Ahno a = new Ahno();
             a.Sayit();
+            Animal dog = new Dog();
+            dog.Bark2();
+            dog.X = 0;
+            Console.WriteLine(dog.X);
+
+            Dog dog2 = new Dog();
+            Console.WriteLine(dog2.X);
+            dog2.Bark();
+
+            SomeObject obj = new SomeObject();
+            obj.Greet();
+            ISomeFunc obj2 = new SomeObject();
+            obj2.Greet();
+            obj2.Finish();
         }
     }
     class DancerPoints
@@ -47,6 +61,55 @@ namespace Code_Coach_Challenge
         public void Sayit()
         {
             Console.WriteLine(Ah);
+        }
+    }
+    public interface Animal
+    {
+        int X { get; set; }
+        void Animal()
+        {
+            Console.WriteLine("Animal created");
+        }
+        void Bark2()
+        {
+            Console.WriteLine("Ba");
+        }
+    }
+    class Dog : Animal
+    {
+        public int X { get; set; }
+        public Dog()
+        {
+            Console.WriteLine("Dog created");
+            X = 1;
+        }
+        ~Dog()
+        {
+            Console.WriteLine("Dog deleted");
+        }
+        public void Bark()
+        {
+            Console.WriteLine("BAAAAAAA");
+        }
+    }
+
+
+    public interface ISomeFunc
+    {
+        void Finish()
+        {
+            Console.WriteLine(" Finish ");
+        }
+        void Greet()
+        {
+            Console.WriteLine(" Greet ");
+        }
+    }
+    class SomeObject : ISomeFunc
+    {
+        public void Greet()
+        {
+            Console.WriteLine(" Obj Greet ");
         }
     }
 }
