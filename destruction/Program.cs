@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace destruction
+﻿namespace destruction
 {
     internal class Program
     {
@@ -8,7 +6,7 @@ namespace destruction
         {
             public static int X { get; set; }
             public static int Y { get; set; }
-            
+
             static Helper()
             {
                 X = 10;
@@ -32,7 +30,7 @@ namespace destruction
                     zzz[index] = value;
                 }
             }
-            public static Ahhh operator+ (Ahhh human1, Ahhh human2)
+            public static Ahhh operator +(Ahhh human1, Ahhh human2)
             {
                 string ship = human1.Name + " loves " + human2.Name + "! :3";
                 Ahhh res = new Ahhh(ship);
