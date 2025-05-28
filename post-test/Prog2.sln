@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice-operators", "..\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test-drawing", "..\test-drawing\test-drawing.csproj", "{FD33EFAE-63E6-48DD-A038-CD17728CE774}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "from down to top", "..\from down to top\from down to top.csproj", "{E1B8B398-1391-4A38-AAE3-449A0F985E9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{FD33EFAE-63E6-48DD-A038-CD17728CE774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD33EFAE-63E6-48DD-A038-CD17728CE774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD33EFAE-63E6-48DD-A038-CD17728CE774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1B8B398-1391-4A38-AAE3-449A0F985E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1B8B398-1391-4A38-AAE3-449A0F985E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1B8B398-1391-4A38-AAE3-449A0F985E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1B8B398-1391-4A38-AAE3-449A0F985E9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
