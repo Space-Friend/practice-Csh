@@ -30,7 +30,7 @@
             bool bo;
             int first_num = 5;
             int second_num = 2;
-            float x = Convert.ToSingle(first_num)/Convert.ToSingle(second_num);
+            float x = Convert.ToSingle(first_num) / Convert.ToSingle(second_num);
             Console.WriteLine(x);
 
             /*
@@ -47,7 +47,7 @@
             damage = 100;
             if (damage > armor)
             {
-                health -= damage-armor;
+                health -= damage - armor;
             }
             Console.WriteLine(health);
 
@@ -56,23 +56,23 @@
              * Еда
              * 
              */
-            int money = 100;
+            int pocketmoney = 100;
             int food;
             int foodPrice = 10;
             bool isAbleToPay;
             Console.WriteLine("Сколько еды?");
             //food = Convert.ToInt16(Console.ReadLine());
             food = 5;
-            
-            isAbleToPay = money >= food * food;
+
+            isAbleToPay = pocketmoney >= food * food;
             food *= Convert.ToInt32(isAbleToPay);
-            money -= food * foodPrice;
-            Console.WriteLine($"money {money}, food {food}");
+            pocketmoney -= food * foodPrice;
+            Console.WriteLine($"money {pocketmoney}, food {food}");
 
             if (isAbleToPay)
             {
-                money -= food * foodPrice;
-                Console.WriteLine($"money {money}, food {food}");
+                pocketmoney -= food * foodPrice;
+                Console.WriteLine($"money {pocketmoney}, food {food}");
             }
             Console.WriteLine();
         }
