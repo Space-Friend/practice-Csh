@@ -74,6 +74,7 @@
                 Console.WriteLine($"money {money}, food {food}");
             }
             Console.WriteLine();
+
         }
     }
 }
