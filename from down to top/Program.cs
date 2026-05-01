@@ -63,7 +63,6 @@
             Console.WriteLine("Сколько еды?");
             //food = Convert.ToInt16(Console.ReadLine());
             food = 5;
-            
             isAbleToPay = money >= food * food;
             food *= Convert.ToInt32(isAbleToPay);
             money -= food * foodPrice;
@@ -75,6 +74,7 @@
                 Console.WriteLine($"money {money}, food {food}");
             }
             Console.WriteLine();
+
         }
     }
 }
