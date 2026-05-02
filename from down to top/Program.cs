@@ -1,4 +1,6 @@
-﻿namespace from_down_to_top
+﻿using System.Text.RegularExpressions;
+
+namespace from_down_to_top
 {
     internal class Program
     {
@@ -75,46 +77,23 @@
             }
             Console.WriteLine();
 
-
+            double[] abc = [0, 4, 2, 5];
+            double[] abd = [1.346, 1.1532, 1.8734, 1.8723];
             string tex = "everything_is_fine";
-            string tex2 = "everythingIsGood";
+            string tex2 = "helloEdabit";
             Console.WriteLine(ToCamelCase(tex));
             Console.WriteLine(ToSnakeCase(tex2)+" ");
+            Console.WriteLine(abc.Max());
+            Console.WriteLine(Convert.ToString(FindMinMax(abd)[0]) +" "+ Convert.ToString(FindMinMax(abd)[1]));
         }
         public static string ToSnakeCase(string str)
         {
-            string _out = "";
-            foreach (char ca in str)
-            {
-                if (char.IsUpper(ca))
-                {
-                    _out += "_"+char.ToLower(ca);
-                }
-                else
-                {
-                    _out += ca;
-                }
-            }
-            return _out;
+            return Regex.Replace(str, "[A-Z]", "_$0").ToLower();
         }
         public static string ToCamelCase(string str)
         {
-            string _out = "";
-            int _index = 0;
-            foreach (char ca in str)
-            {
-                if (ca=='_')
-                {
-                    _out += char.ToLower(ca);
-                }
-                else
-                {
-                    _out += ca;
-                }
-                
-            }
-            return _out;
+            return Regex.Replace(str, @"_\w", m => m.Value[1].ToString().ToUpper());
         }
-        
+        public static double[] FindMinMax(double[] values) => new[] { values.Min(), values.Max() };
     }
 }
