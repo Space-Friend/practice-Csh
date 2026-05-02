@@ -75,6 +75,46 @@
             }
             Console.WriteLine();
 
+
+            string tex = "everything_is_fine";
+            string tex2 = "everythingIsGood";
+            Console.WriteLine(ToCamelCase(tex));
+            Console.WriteLine(ToSnakeCase(tex2)+" ");
         }
+        public static string ToSnakeCase(string str)
+        {
+            string _out = "";
+            foreach (char ca in str)
+            {
+                if (char.IsUpper(ca))
+                {
+                    _out += "_"+char.ToLower(ca);
+                }
+                else
+                {
+                    _out += ca;
+                }
+            }
+            return _out;
+        }
+        public static string ToCamelCase(string str)
+        {
+            string _out = "";
+            int _index = 0;
+            foreach (char ca in str)
+            {
+                if (ca=='_')
+                {
+                    _out += char.ToLower(ca);
+                }
+                else
+                {
+                    _out += ca;
+                }
+                
+            }
+            return _out;
+        }
+        
     }
 }
