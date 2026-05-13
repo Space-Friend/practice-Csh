@@ -1,6 +1,7 @@
 ﻿using System.Numerics;
 using System.Security.AccessControl;
 using System.Text.RegularExpressions;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace from_down_to_top
@@ -92,6 +93,7 @@ namespace from_down_to_top
             //Console.WriteLine(EncodeMorse2("cum cumm"));
             //BigInteger huge = BigInteger.Parse("12345678901234567890123456789012345678910000000000000000000000000000000000000");
             //Console.WriteLine(Fibonacci(7));
+            Console.WriteLine(string.Join(", ", ArrayOfMultiples(3, 5)));
             Console.WriteLine(SumSmallest([-1, 10, 2, 3, -5, 5]));
         } // Конец Main
 
@@ -215,6 +217,15 @@ namespace from_down_to_top
                 n_1 = _last;
             }
             return Convert.ToString(_last);
+        }
+        public static int[] ArrayOfMultiples(int num, int length)
+        {
+            int[] result = new int[length];
+            for (int i = 0; i < length; i++)
+            {
+                result[i] = num * (i+1);
+            }
+            return result;
         }
         public static int SumSmallest(int[] values) => values.Where(x => x >= 0).OrderBy(x => x).Take(2).Sum();
         // Конец функций
