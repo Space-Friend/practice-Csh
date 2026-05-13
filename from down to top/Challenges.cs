@@ -1,5 +1,7 @@
 ﻿using System.Numerics;
+using System.Security.AccessControl;
 using System.Text.RegularExpressions;
+
 
 namespace from_down_to_top
 {
@@ -87,9 +89,10 @@ namespace from_down_to_top
             //Console.WriteLine(abc.Max());
             //Console.WriteLine(Convert.ToString(FindMinMax(abd)[0]) +" "+ Convert.ToString(FindMinMax(abd)[1]));
             //var ah = Convert.ToString(Console.ReadLine());
-            Console.WriteLine(EncodeMorse2("cum cumm"));
+            //Console.WriteLine(EncodeMorse2("cum cumm"));
             //BigInteger huge = BigInteger.Parse("12345678901234567890123456789012345678910000000000000000000000000000000000000");
-            Console.WriteLine(Fibonacci(7));
+            //Console.WriteLine(Fibonacci(7));
+            Console.WriteLine(SumSmallest([-1, 10, 2, 3, -5, 5]));
         } // Конец Main
 
         // Функции
@@ -198,7 +201,6 @@ namespace from_down_to_top
 
             return string.Join(" ", parts);
         }
-
         public static string Fibonacci(int n)
         {
             if (n <= 2) { return "1"; }
@@ -214,6 +216,7 @@ namespace from_down_to_top
             }
             return Convert.ToString(_last);
         }
+        public static int SumSmallest(int[] values) => values.Where(x => x >= 0).OrderBy(x => x).Take(2).Sum();
         // Конец функций
     }
 }
