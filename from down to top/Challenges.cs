@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Numerics;
 using System.Security.AccessControl;
 using System.Text.RegularExpressions;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -95,6 +96,11 @@ namespace from_down_to_top
             //Console.WriteLine(Fibonacci(7));
             Console.WriteLine(string.Join(", ", ArrayOfMultiples(3, 5)));
             Console.WriteLine(SumSmallest([-1, 10, 2, 3, -5, 5]));
+            Console.WriteLine(CheckEquality(1, 2));
+            Console.WriteLine(CheckEquality(1, 1));
+            Console.WriteLine(CheckEquality("1", 1));
+            Console.WriteLine(Uncensor("F***ck","aou"));
+            Console.WriteLine(Collatz(4,10));
         } // Конец Main
 
         // Функции
@@ -223,11 +229,45 @@ namespace from_down_to_top
             int[] result = new int[length];
             for (int i = 0; i < length; i++)
             {
-                result[i] = num * (i+1);
+                result[i] = num * (i + 1);
             }
             return result;
         }
         public static int SumSmallest(int[] values) => values.Where(x => x >= 0).OrderBy(x => x).Take(2).Sum();
+        public static bool CheckEquality(object a, object b) => System.Object.Equals(a, b);
+        public static string Uncensor(string txt, string vowels)
+        {
+            string uncensored = "";
+            foreach (char letter in txt)
+            {
+                if (letter=='*')
+                {
+                    uncensored += vowels[0];
+                    vowels = vowels.Length > 0 ? vowels.Substring(1) : "";
+                }
+                else
+                {
+                    uncensored += letter;
+                }
+            }
+            return uncensored;
+        }
+        public static string Collatz(Int64 a, Int64 b)
+        {
+            int CollatzRes(Int64 num)
+            {
+                int res = 0;
+                while (num > 1)
+                {
+                    num = num % 2 == 0 ? num / 2 : num * 3 + 1;
+                    res++;
+                }
+                    return (res);
+            }
+            var a_res = CollatzRes(a);
+            var b_res = CollatzRes(b);
+            return a_res > b_res ? "a":"b";
+        }
         // Конец функций
     }
 }
